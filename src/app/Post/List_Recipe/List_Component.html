@@ -1,13 +1,17 @@
-<mat-card  class="toTheRight">
+<mat-card class="toTheRight">
+  <mat-form-field>
+    <input matInput (input)="applyFilter($event.target.value)" placeholder="Search">
+  </mat-form-field>
+
   <mat-accordion>
-    <mat-expansion-panel hideToggle  class="listColoring">
+    <mat-expansion-panel hideToggle class="listColoring">
       <mat-expansion-panel-header>
         <mat-panel-title>
           Click here to see recipes
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <div *ngFor="let post of posts">
-        <p> Title: {{post.title}} <br> {{ post.content }} </p>
+      <div *ngFor="let post of filteredPosts">
+        <p>Title: {{post.title}} <br> {{ post.content }}</p>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
