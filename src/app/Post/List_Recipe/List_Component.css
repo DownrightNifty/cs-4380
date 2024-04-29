@@ -1,0 +1,12 @@
+.buttonColoring{
+  background-color: lightgreen;
+}
+
+.listColoring{
+  background-color: lightcoral;
+}
+
+.toTheRight{
+  float:right;
+  width:50%;
+}

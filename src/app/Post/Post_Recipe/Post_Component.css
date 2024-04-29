@@ -1,0 +1,17 @@
+.toTheLeft {
+  width: 100%; /* Set width to 100% to occupy entire width of the card */
+  background-color: hsl(348, 100%, 90%);
+}
+
+.form-container {
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+mat-form-field {
+  width: 100%; /* Set form fields to occupy entire width */
+}
+
+button[type="submit"] {
+  margin-top: 20px; /* Add some space between form fields and button */
+  background-color: lightcoral;
+}

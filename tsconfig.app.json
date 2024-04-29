@@ -3,10 +3,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "allowJs": true
   },
   "files": [
-    "src/main.ts"
+    "src/main.ts",
+    "server.js"
   ],
   "include": [
     "src/**/*.d.ts"
