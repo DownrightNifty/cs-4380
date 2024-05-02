@@ -8,9 +8,9 @@ export class AuthService {
   users: any[] =[
     {
       id: 1,
-      name: 'David',
-      username: 'david',
-      password: 'abc'
+      name: 'user',
+      username: 'user',
+      password: 'user'
     },
     {
       id: 1,
