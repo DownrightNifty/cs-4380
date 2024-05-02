@@ -9,8 +9,8 @@ mongoose.connect("mongodb+srv://server:1FzjhXJCPYfb2SJJ@recipeexchange.1y5gdq4.m
 .then(() => {
   console.log('Connected to database');
 })
-.catch(() => {
-  console.log("Database connection error");
+.catch((err) => {
+  console.log("Database connection error: "+err);
 })
 
 app.use((req, res, next) => {
