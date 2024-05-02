@@ -3,7 +3,7 @@ const debug = require("debug")("node-angular");
 const http = require("http");
 
 
-app.use('/api/posts',(req,res,next)=>{
+/* app.use('/api/posts',(req,res,next)=>{
   // Simulate a response for /api/posts endpoint
   const posts = [
     {
@@ -18,7 +18,7 @@ app.use('/api/posts',(req,res,next)=>{
     message: 'Posts fetched successfully',
     posts: posts
   });
-});
+}); */
 
 const normalizePort = val => {
   var port = parseInt(val, 10);

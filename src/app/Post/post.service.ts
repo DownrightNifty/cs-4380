@@ -16,17 +16,23 @@ export class PostService {
   private postUpDate = new Subject<Post[]>()
   getPosts(){
     this.http.get<{message: string, posts:Post[]}>('http://localhost:3000/api/posts').subscribe((postData)=>{
-    this.posts = postData.posts;
-    this.postUpDate.next([...this.posts]);
+      this.posts = postData.posts;
+      this.postUpDate.next([...this.posts]);
     });
-    }
+  }
+
   getPostUpdateListener(){
   return this.postUpDate.asObservable();
   }
+
   addPost(content: string, title: string){
     const post: Post ={id: this.nextId++, content: content, title: title};
-    this.posts.push(post);
-    this.postUpDate.next([...this.posts]);
+    this.http.post<{message:String}>('http://localhost:3000/api/posts', post)
+    .subscribe((responseData)=>{
+      console.log(responseData.message);
+      this.posts.push(post);
+      this.postUpDate.next([...this.posts]);
+    })
   }
-  }
+}
 
