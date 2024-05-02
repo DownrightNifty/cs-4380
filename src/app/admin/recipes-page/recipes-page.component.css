@@ -1,0 +1,18 @@
+.background{
+  background-color: lightpink;
+  height: 100vh;
+}
+
+body{
+  background-color: pink;
+}
+
+.toTheRight{
+  float:right;
+}
+
+.toTheLeft{
+  float:left;
+  width:50%;
+}
+

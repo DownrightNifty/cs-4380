@@ -1,0 +1,23 @@
+#container{
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 50px;
+
+  h1{
+    margin: 0px;
+    color: darkred;
+  }
+
+  button{
+    background-color: black;
+    color: white;
+    border: 0px;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
