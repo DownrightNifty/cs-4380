@@ -16,3 +16,7 @@
   align-items: center;
   height: 100%; /* Ensure the toolbar row takes up the full height */
 }
+
+.logout-button {
+  margin-left: auto; /* Aligns the button to the right side of the toolbar */
+}
