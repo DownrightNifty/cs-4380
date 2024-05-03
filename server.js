@@ -2,24 +2,6 @@ const app = require("./backend/app.js");
 const debug = require("debug")("node-angular");
 const http = require("http");
 
-
-app.use('/api/posts',(req,res,next)=>{
-  // Simulate a response for /api/posts endpoint
-  const posts = [
-    {
-      id: "6546654",
-      title:"Ratatouille",
-      content:"This is the Ratatouille recipe"
-    }
-  ];
-
-  // Send the posts as JSON response
-  res.status(200).json({
-    message: 'Posts fetched successfully',
-    posts: posts
-  });
-});
-
 const normalizePort = val => {
   var port = parseInt(val, 10);
 
