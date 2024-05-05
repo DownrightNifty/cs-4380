@@ -7,8 +7,7 @@
     "allowJs": true
   },
   "files": [
-    "src/main.ts",
-    "server.js"
+    "src/main.ts"
   ],
   "include": [
     "src/**/*.d.ts"

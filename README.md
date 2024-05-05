@@ -1,27 +1,46 @@
-# Colorizer
+# Bone Apple Teeth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+This app has three major components:
+
+1. Frontend Angular app (written in TypeScript, compiled to JS)
+2. A simple HTTP server to serve the frontend to the browser
+3. Backend to handle API calls and connect to MongoDB
+
+It is a containerized app that is deployed using Docker. We use 3 containers/servers:
+
+1. Simple frontend HTTP server (nginx)
+2. Backend HTTP server (Node.js)
+3. Proxy server to connect the two servers (nginx)
+
+## Install Angular and other dependencies
+
+```
+npm install -g @angular/cli
+npm install
+```
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve`, then `nodemon backend/server.js` in a seperate terminal (so both servers can run simultaneously).
 
-## Code scaffolding
+## Deploy with Docker
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First, build the frontend:
 
-## Build
+```
+ng build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+You need to build the frontend on your local machine before you run `docker compose build`. The build process expects that a pre-built frontend app is already stored in `dist/`. The backend doesn't need to be built because it's written in vanilla JS and thus can be executed directly.
 
-## Running unit tests
+Then, build the containers:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+docker compose build
+```
 
-## Running end-to-end tests
+Finally, run the containers:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+docker compose up -d
+```
