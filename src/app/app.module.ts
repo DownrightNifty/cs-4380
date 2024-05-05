@@ -9,6 +9,7 @@ import {PostListComponent} from './admin/recipes-page/Post/List_Recipe/List_Comp
 import {LoginComponent} from './login/login.component';
 import {AdminComponent} from './admin/admin.component';
 import {RecipesPageComponent} from './admin/recipes-page/recipes-page.component';
+import {FooterComponent} from './admin/recipes-page/Footer/footer.component';
 
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
@@ -30,7 +31,8 @@ import {CommonModule} from '@angular/common';
     PostListComponent,
     LoginComponent,
     RecipesPageComponent,
-    AdminComponent
+    AdminComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
