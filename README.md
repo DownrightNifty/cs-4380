@@ -33,7 +33,7 @@ First, build the frontend:
 ng build
 ```
 
-You need to build the frontend on your local machine before you run `docker compose build`. The build process expects that a pre-built frontend app is already stored in `dist/`. The backend doesn't need to be built because it's written in vanilla JS and thus can be executed directly.
+Obtain `SECRET.txt` and copy it to `proxy/SECRET.txt`. The build process expects that a pre-built frontend app is already stored in `dist/`. The backend doesn't need to be built.
 
 Then, build the containers:
 
