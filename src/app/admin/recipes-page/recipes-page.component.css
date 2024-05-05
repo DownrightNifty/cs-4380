@@ -1,18 +1,28 @@
-.background{
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: lightpink;
-  height: 100vh;
 }
 
-body{
+.content {
+  flex-grow: 1;
+}
+
+.background {
+  background-color: lightpink;
+}
+
+body {
+  margin: 0;
   background-color: pink;
 }
 
-.toTheRight{
-  float:right;
+.toTheRight {
+  float: right;
 }
 
-.toTheLeft{
-  float:left;
-  width:50%;
+.toTheLeft {
+  float: left;
+  width: 50%;
 }
-
