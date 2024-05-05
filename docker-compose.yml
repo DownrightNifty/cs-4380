@@ -28,30 +28,33 @@ services:
       context: "."
       dockerfile: "./Dockerfile"
     networks:
-      - events_net
+      - bat_net
   backend:
     build:
       context: "./backend"
       dockerfile: "./Dockerfile"
     networks:
-      - events_net
+      - bat_net
   # db:
   #   image: mongo:latest
   #   ports:
   #     - 27017:27017
   #   networks:
-  #     - events_net
+  #     - bat_net
   proxy:
-    image: nginx:stable
-    environment:
-      - NGINX_ENVSUBST_TEMPLATE_SUFFIX=.conf
-      - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
-    volumes:
-      - ${PWD}/nginx_proxy.conf:/etc/nginx/templates/nginx.conf.conf
+    build:
+      context: "./proxy"
+      dockerfile: "./Dockerfile"
+    # image: nginx:stable
+    # environment:
+    #   - NGINX_ENVSUBST_TEMPLATE_SUFFIX=.conf
+    #   - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+    # volumes:
+    #   - ${PWD}/nginx_proxy.conf:/etc/nginx/templates/nginx.conf.conf
     ports:
       - 80:80
     networks:
-      - events_net
+      - bat_net
 
 networks:
-  events_net:
+  bat_net:
