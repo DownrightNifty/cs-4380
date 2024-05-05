@@ -48,6 +48,7 @@ docker compose up -d
 ```
 
 You can use this command to do everything in one step:
+
 ```
 ng build && docker compose build && docker compose up -d
 ```
