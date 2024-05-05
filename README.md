@@ -23,6 +23,8 @@ npm install
 
 Run `ng serve`, then `nodemon backend/server.js` in a seperate terminal (so both servers can run simultaneously).
 
+TODO: Fix database <-> frontend connection when no Docker proxy server is running and they're on different ports. For now, using Docker for development is recommended.
+
 ## Deploy with Docker
 
 First, build the frontend:
@@ -43,4 +45,9 @@ Finally, run the containers:
 
 ```
 docker compose up -d
+```
+
+You can use this command to do everything in one step:
+```
+ng build && docker compose build && docker compose up -d
 ```
